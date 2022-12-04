@@ -99,12 +99,12 @@ group by d.id_depto
 having count(id_empleado) > 3;
 
 # 25. Mostrar el código y nombre de cada jefe, junto al número de empleados que dirige. Solo los que tengan más de dos empleados (2 incluido).
+#no funca, seguir revisando!
 select d.id_empleado, d.nombre, count(d.id_empleado) as 'Número empleados' from empleado d, empleado e
 where  e.cod_jefe = d.id_empleado
 group by d.id_empleado, d.nombre
 having count(d.id_empleado)>= 2
 order by count(d.id_empleado) desc;
-#no funca, seguir revisando!
 
 # 26. Hallar los departamentos que no tienen empleados 
 # Podemos insertar un campo en null para mostrar algo
