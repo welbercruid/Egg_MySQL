@@ -1,3 +1,4 @@
+# Uso de la base de datos
 USE superheroe;
 
 # insertar en la tabla creador 
@@ -48,3 +49,10 @@ order by inteligencia asc;
 update personaje
 set inteligencia = 160
 where id_personaje = 13;
+
+# eliminar tablas y base de datos. Ojo papu!
+drop table creador;
+drop table personaje;
+drop database superheroe;
+
+-- 
